@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="ngApp">
+    <head>    
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+        <script src="app.js"></script>
+        <style>
+            .blue {
+                color: blue;
+            }
+            .red {
+                color: red;
+            }
+            .yellow {
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div ng-controller="inputController">
+            Message: <input label="Message" placeholder="Your message here" ng-model="message" />
+            <select ng-options="option for option in options" ng-model="selected"></select>
+            <h1 ng-class="selected">{{message}}</h1>
+        </div>
+    </body>
+</html>
