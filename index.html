@@ -1,27 +1,45 @@
 <!--HTML index page-->
 <!DOCTYPE html>
-<html lang="en" ng-app="connote">
+<html lang="en" ng-app=>
 <head>
      <link rel="stylesheet" href="main.css">
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Emilys+Candy|Habibi|Julee|Lovers+Quarrel|Miniver|Monsieur+La+Doulaise|Nosifer|Swanky+and+Moo+Moo|UnifrakturCook:700|UnifrakturMaguntia" rel="stylesheet">
     <script src="app.js"></script>
-    <title>Say it with feeling</title>
+    <title>Connote: Say it with feeling</title>
 </head>
 <body>
     <!-------------------------Header---------------------------------->
     <div>
-        <h1>Connote</h1><br> 
+        <h1>Connote</h1><br>
         <h2>Add a connotation to your text</h2>
     </div>
     <!-------------------------Input Form------------------------------>
      <div>
-
+        <form name = "connote-form">   
+            <h2>Message</h2>
+            <input type="text" ng-model="message" placeholder="Enter a Message Here"><br>
+            <h2>Emotion</h2>
+            <select>
+                <option value="ecstatic">ecstatic</option>
+                <option value="happy">happy</option>
+                <option value="pleased">pleased</option>
+                <option value="neutral">neutral</option>
+                <option value="peeved">peeved</option>
+                <option value="upset">upset</option>
+                <option value="furious">furious</option>
+            </select>
+            <input type="range" ng-model="value" min=0 max =100>
+            <p>{{value}}</h1>
+            <h2>Emphasis</h2>
+        </form> 
      </div>
 
      <!-----------------------Output Message---------------------------->
-      <div ng-show>
-          {{connote.message}}
+      <div>
+          <h1 class="ng-class: value;">{{message}}</h1>
+
       </div>
 </body>
 </html>

@@ -1,0 +1,31 @@
+.furious{
+  color: #e60000,
+
+}
+
+.upset{
+  color: #ff6600,
+  /*font-family: 'UnifrakturCook', cursive;*/
+}
+
+
+.peeved{
+  color: #ff9966
+  /*font-family: 'UnifrakturMaguntia', cursive*/
+}
+
+.neutral{
+  color: #ffff99
+}
+
+.pleased{
+  color: #ccff99
+}
+
+.happy{
+  color: #99ff66
+}
+
+.ecstatic{
+  color: #66ff33
+}
