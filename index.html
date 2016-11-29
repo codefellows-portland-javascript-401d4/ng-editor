@@ -5,22 +5,24 @@
     <script src="main.js"></script>
   </head>
   <body>
- <div ng-app="myApp" ng-controller="formCtrl" ng-style="{font: selectedFont}">    
+ <div ng-app="myApp" ng-controller="formCtrl">    
       <form>
            Message: <input type="text" ng-model="message">
 Select a font style:
 <select ng-model="selectedFont" ng-options="x for x in fonts">
 </select>
 <input type="button" value="embiggen" ng-click="myStyle={fontSize: 'xx-large'}">
-<input type="button" value="emredden" ng-click="myStyle={color:'red'}">
 <input type="button" value="clear" ng-click="myStyle={}">
 
 </form>
 <hr>
+<span style="font-family:{{selectedFont}}">{{message}}</span>
+<hr>
 <span ng-style="myStyle">{{message}}</span>
+<hr>
+<span style="font-family:{{selectedFont}}"><span ng-style="myStyle">{{message}}</span></span>
+<hr>
+Selected Font = {{selectedFont}}
 </div>
   </body>
 </html>
-
-
-fontSize = "xx-large";
