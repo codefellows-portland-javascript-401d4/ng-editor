@@ -5,11 +5,10 @@ app.controller('stylesController', function($scope) {
     {name: 'bold'},
     {name: 'fine'},
     {name: 'bright'}
-  ]
+  ];
+
+  $scope.font = {
+    size: 22
+  };
 });
 
-app.controller('sizeController', function($scope) {
-  $scope.size = [
-    
-  ]
-})

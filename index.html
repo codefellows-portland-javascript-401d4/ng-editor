@@ -13,7 +13,7 @@
     .bold {
       font-family: Arial;
       font-weight: bolder;
-      font-size: 40px;
+      <!--font-size: 40px;-->
     }
 
     .fine {
@@ -33,8 +33,8 @@
       </select>
     </label>
     <label>Change the font size</label>
-    <!--<input type="range" ng-model"fontSize" max="60" value="18">t-->
-    <h1 class="{{myStyle.name}}">{{yourMessage}}</h1>
+    <input type="range" ng-model="font.size" min="12" max="60" value="18">
+    <h1 ng-style="{'font-size':font.size + 'px'}" class="{{myStyle.name}}">{{yourMessage}}</h1>
   </div>
 </body>
 </html>
