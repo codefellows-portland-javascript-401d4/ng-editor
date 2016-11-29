@@ -1,0 +1,19 @@
+{
+  "name": "ng-editor",
+  "version": "1.0.0",
+  "description": "class assignment",
+  "main": "main.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JPGothro/ng-editor.git"
+  },
+  "author": "JP Gothro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JPGothro/ng-editor/issues"
+  },
+  "homepage": "https://github.com/JPGothro/ng-editor#readme"
+}
