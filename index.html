@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>ng-editor cf401 lab</title>
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Bungee+Inline|Tillana" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+      <script src="main.js"></script>
+  </head>
+
+  <body>
+    <div ng-controller="someKindaControl">
+      <input ng-model="message" type="text">
+        <select name="colors">
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+        </select>
+        <select name="fonts">
+          <option value="Tillana">Tillana</option>
+          <option value="Bungee+Inline">Bungee Inline</option>
+          <option value="Bitter">Bitter</option>
+        </select>
+      <hr>
+      message: {{message}}
+    </div>
+    
+  </body>
+</html>
