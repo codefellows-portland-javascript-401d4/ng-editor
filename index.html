@@ -1,12 +1,15 @@
 <!<!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp">
   <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
-    <script src="main.js"></script>
+    
     <style>
-      .helvetica {
-        font-family: helvetica;
+      .excited {
+        font-family: impact;
+      }
+      .display{
+        font-size: 20px;
       }
       .blue {
         color: blue;
@@ -24,28 +27,27 @@
       <div ng-controller="colorController">
         <label>Message:</label>
         <input type="text" ng-model="yourMessage" placeholder="Enter your message here">
-        <!--<select ng-model="myColor" ng-options="color.name for options"></select>-->
 
         <label>Pick your color:</label>
         <select ng-model="yourColor" ng-options="color.name for color in colors"></select>
-        <!--<input type="checkbox" ng-model="isHappy">-->
+        <br>
 
         <label>Excited?</label>
-        <input type="range" ng-model="isExcited">
+        <input type="checkbox" ng-model="isExcited">
 
         <label>Font Size:</label>
-        <input type="range" ng-model="font.size" value=min min=4 max=50>
-
-        <p ng-style="{'font-size': font.size + 'px'}" ng-class="[yourColor.name]">{{yourMessage}}</p>
+        <input type="range" ng-model="font.size" value=min min=10 max=50>
 
         <hr>
-        
+
         <p>Your message:</p>
-        {{yourMessage}}
-        <h1 ng-class="[{ happy: isHappy }, mood]">{{yourMessage}}</h1>
-        <h1 ng-class="[{ excited: isExcited }, mood]">{{yourMessage}}</h1>
+
+        <p ng-style="{'font-size': font.size + 'px'}" 
+           ng-class="[{ excited: isExcited }, yourColor.name]">{{yourMessage}}
+        </p>        
 
       </div>
+      <script src="main.js"></script>
     </body>
   </html>
     
