@@ -1,0 +1,20 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div ng-controller="formMsg">
+            <form>
+                Message <input type="text" ng-model="message">
+                <input type="range" ng-model="fontRange" value="32" > 
+            </form>
+            <br>
+            <h1>{{message}}</h1>
+            <h1>{{fontRange}}</h1>
+        </div>
+
+    </body>
+
+</html>
