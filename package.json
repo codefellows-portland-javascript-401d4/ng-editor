@@ -1,0 +1,19 @@
+{
+  "name": "ng-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willnickerson/ng-editor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willnickerson/ng-editor/issues"
+  },
+  "homepage": "https://github.com/willnickerson/ng-editor#readme"
+}
