@@ -3,28 +3,29 @@
     <title></title>
     <link rel="stylesheet" href="styles/main.css" type="text/css">
   </head>
-  <body>
+  <body ng-controller="messageInput">
     <!--<input type="text" -->
     <div>
       Message: 
-      <input type="text" ng-model="messageInput">
+      <input type="text" ng-model="body">
     </div>
 
     <div>
-      <select>
-        <option value="Modern">Modern</option>
-        <option value="Bold">Bold</option>
-        <option value="Elegant">Elegant</option>
+      Style: 
+      <select ng-model="fontStyle">
+        <option value="default">Select a style</option>
+        <option ng-repeat="category in categories">{{category.name}}</option>
       </select>
     </div>
 
     <hr>
 
-    <div>
-      {{messageInput}}
+    <div >
+      {{body}}
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="scripts/app.js"></script>
   </body>
 </html>
