@@ -17,7 +17,7 @@ app.controller('someKindaControl', function($scope) {
   $scope.myFont = $scope.fonts[0];
 
   $scope.selectedColor = 'red';
-  $scope.selectedFont = '';
+  $scope.selectedFont = 'Tillana';
 
   $scope.changeColor = function(option) {
     $scope.selectedColor = option.color;

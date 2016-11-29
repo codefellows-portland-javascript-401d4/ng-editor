@@ -17,7 +17,7 @@
       <select ng-model="myFont" ng-options="font.font for font in fonts" ng-change="changeFont(myFont)"></select>
 
       <hr>
-      <div style='color:"{{selectedColor}}"; font:"{{selectedFont}}"'></div>
+      <div style="color:{{selectedColor}}; font-family:{{selectedFont}}">{{message}}</div>
 
       
     </div>
