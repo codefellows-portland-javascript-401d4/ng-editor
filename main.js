@@ -1,4 +1,4 @@
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', []); // eslint-disable-line no-undef
 
 app.controller('editorController', function($scope) {
   $scope.resizeText = function() {
@@ -21,9 +21,6 @@ app.controller('editorController', function($scope) {
     'robot',
     'oldSkool',
     'casual'
-  ]
-  $scope.selectFont = function() {
-
-  };
+  ];
 
 });

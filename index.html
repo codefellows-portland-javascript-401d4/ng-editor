@@ -26,16 +26,14 @@
     <label>Text to edit: <input type="text" size="40" ng-model="editText"></label>
     <label>Text size:
     <select ng-model="textSize" ng-change="resizeText()">
-      <option ng-repeat="sz in ['sm', 'md', 'lg'] track by $index">{{ sz }}</option>
+      <option ng-repeat="sz in ['sm', 'md', 'lg']">{{ sz }}</option>
     </select>
     </label>
     <label>Text color:
     <input type="color" ng-model="textColor">
     </label>
     <label>Font style:
-      <select ng-model="fontStyle" ng-options="style for style in styles">
-        <!--<option ng-repeat="styl in ['robot', 'oldSkool', 'casual'] track by $index">{{ styl }}</option>-->
-      </select>
+      <select ng-model="fontStyle" ng-options="style for style in styles"></select>
     <hr>
     <span class="{{fontStyle}}" style="font-size:{{textEms}}em;color:{{textColor}}">{{ editText }}</span>
   </div>
