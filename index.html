@@ -21,15 +21,6 @@
             <h3>Message</h3>
             <input type="text" ng-model="message" placeholder="Enter a Message Here"><br>
             <h3>Emotion</h3>
-            <!--<select ng-model="emotion">
-                <option value="ecstatic">ecstatic</option>
-                <option value="happy">happy</option>
-                <option value="pleased">pleased</option>
-                <option value="neutral">neutral</option>
-                <option value="peeved">peeved</option>
-                <option value="upset">upset</option>
-                <option value="furious">furious</option>
-            </select>-->
              <select ng-model="emotion" ng-options="x for x in moods">
                  </select>
             <h3>Emphasis</h3>
@@ -38,7 +29,7 @@
 
      <!-----------------------Output Message---------------------------->
     
-          <h1 id="output-text" class={{emotion}}><font size={{value}}>{{message}}</font></h1>
+          <h1 id="output-text" class={{emotion}}><font size={{value}}pt>{{message}}</font></h1>
 
       </div>
 </body>
