@@ -1,0 +1,18 @@
+<!doctype html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  <div ng-app="myApp" ng-controller="formCtrl">    
+    <form>
+      Message: <input type="text" ng-model="message">
+      Select a font: <select ng-model="selectedFont" ng-options="x for x in fonts"></select>
+      <input type="button" value="embiggen" ng-click="myStyle={fontSize: 'xx-large'}">
+      <input type="button" value="debiggen" ng-click="myStyle={}">
+    </form>
+    <hr>
+    <span style="font-family:{{selectedFont}}"><span ng-style="myStyle">{{message}}</span></span>
+  </div>
+</body>
+</html>
