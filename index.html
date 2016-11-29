@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular App</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+  <script src="app.js"></script>
+  <style>
+    .tooLow {
+      color:red;
+    }
+  </style>
+</head>
+<body ng-controller="aboutMeCtrl">
+  <textarea placeholder="Tell us about yourself!" rows=15 cols =30 maxlength=150 ng-model="aboutMe"></textarea>
+  <br/>
+  <span>Your text is <span ng-class="{tooLow: aboutMe.length < randomNum}">{{aboutMe.length || 0}}</span> characters long!</span>
+  <br/>
+  <span>Your random number is {{randomNum}}!</span>
+  <br/>
+  <p ng-if="randomNum > aboutMe.length">{{aboutMe}}</p>
+  <p ng-if="randomNum < aboutMe.length" ng-style="styleObj">{{reverse(aboutMe)}}</p>
+  <br/>
+  <label>How much did you enjoy this activity?</label>
+  <select ng-model="thoughts" ng-options="x.opinion for x in opinions">{{opinion}}></select>
+  <p>{{thoughts.smiley}}</p>
+</body>
+</html>
