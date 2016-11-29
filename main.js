@@ -6,4 +6,10 @@ app.controller('stylesController', function($scope) {
     {name: 'fine'},
     {name: 'bright'}
   ]
+});
+
+app.controller('sizeController', function($scope) {
+  $scope.size = [
+    
+  ]
 })
