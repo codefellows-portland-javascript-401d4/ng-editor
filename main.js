@@ -6,5 +6,6 @@ app.controller('colorController', function($scope) {
     { name: 'golden' },
     { name: 'green'}
   ];
+  
   $scope.yourColor = $scope.colors[0];
 });

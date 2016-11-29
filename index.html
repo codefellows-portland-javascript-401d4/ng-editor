@@ -5,10 +5,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
     <script src="main.js"></script>
     <style>
-      .display {
-        font-size: 25px;
-        font-family: serif;
-      }
       .helvetica {
         font-family: helvetica;
       }
@@ -39,9 +35,13 @@
 
         <label>Font Size:</label>
         <input type="range" ng-model="font.size" value=min min=4 max=50>
+
+        <p ng-style="{'font-size': font.size + 'px'}" ng-class="[yourColor.name]">{{yourMessage}}</p>
+
         <hr>
-        {{mood}}
+        
         <p>Your message:</p>
+        {{yourMessage}}
         <h1 ng-class="[{ happy: isHappy }, mood]">{{yourMessage}}</h1>
         <h1 ng-class="[{ excited: isExcited }, mood]">{{yourMessage}}</h1>
 
