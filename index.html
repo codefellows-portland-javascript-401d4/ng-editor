@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+  <script src="main.js"></script>
+  <style>
+    .bright {
+      color: red;
+
+    }
+    </style>
+</head>
+<body>
+  <div ng-controller="stylesController">
+    <label>Message</label>
+    <input type="text" ng-model="yourMessage" placeholder="Enter a message here">
+    <label>Choose a style
+      <select ng-model="myStyle" ng-options="style.name for style in styles">
+        <option value="">choose a style</option>
+      </select>
+    </label>
+    <h1 ng-class="{{myStyle.name}}">{{yourMessage}}</h1>
+  </div>
+</body>
+</html>
