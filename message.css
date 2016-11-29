@@ -1,17 +1,20 @@
-.furious{
-  color: #e60000,
+#output-text{
+  background-color: grey;
+}
 
+.furious{
+  font-family: 'Nosifer', cursive;
+  color: #e60000
 }
 
 .upset{
-  color: #ff6600,
-  /*font-family: 'UnifrakturCook', cursive;*/
+  font-family: 'UnifrakturCook', cursive;
+  color: #ff6600
 }
 
-
 .peeved{
+  font-family: 'Swanky and Moo Moo', cursive;
   color: #ff9966
-  /*font-family: 'UnifrakturMaguntia', cursive*/
 }
 
 .neutral{
@@ -19,13 +22,16 @@
 }
 
 .pleased{
+  font-family: 'Miniver', cursive;
   color: #ccff99
 }
 
 .happy{
+  font-family: 'Lovers Quarrel', cursive;
   color: #99ff66
 }
 
 .ecstatic{
+  font-family: 'Monsieur La Doulaise', cursive;
   color: #66ff33
 }

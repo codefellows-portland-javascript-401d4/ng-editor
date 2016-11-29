@@ -1,8 +1,8 @@
 <!--HTML index page-->
 <!DOCTYPE html>
-<html lang="en" ng-app=>
+<html lang="en" ng-app="connote">
 <head>
-     <link rel="stylesheet" href="main.css">
+     <link rel="stylesheet" href="message.css">
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Emilys+Candy|Habibi|Julee|Lovers+Quarrel|Miniver|Monsieur+La+Doulaise|Nosifer|Swanky+and+Moo+Moo|UnifrakturCook:700|UnifrakturMaguntia" rel="stylesheet">
@@ -12,16 +12,16 @@
 <body>
     <!-------------------------Header---------------------------------->
     <div>
-        <h1>Connote</h1><br>
-        <h2>Add a connotation to your text</h2>
+        <h1>Connote</h1>
+        <h2><em>Add a connotation to your text</em></h2>
     </div>
     <!-------------------------Input Form------------------------------>
-     <div>
+     <div ng-controller="moods">
         <form name = "connote-form">   
-            <h2>Message</h2>
+            <h3>Message</h3>
             <input type="text" ng-model="message" placeholder="Enter a Message Here"><br>
-            <h2>Emotion</h2>
-            <select>
+            <h3>Emotion</h3>
+            <!--<select ng-model="emotion">
                 <option value="ecstatic">ecstatic</option>
                 <option value="happy">happy</option>
                 <option value="pleased">pleased</option>
@@ -29,16 +29,16 @@
                 <option value="peeved">peeved</option>
                 <option value="upset">upset</option>
                 <option value="furious">furious</option>
-            </select>
-            <input type="range" ng-model="value" min=0 max =100>
-            <p>{{value}}</h1>
-            <h2>Emphasis</h2>
+            </select>-->
+             <select ng-model="emotion" ng-options="x for x in moods">
+                 </select>
+            <h3>Emphasis</h3>
+            <input type="range" ng-model="value" min=0 max =7>
         </form> 
-     </div>
 
      <!-----------------------Output Message---------------------------->
-      <div>
-          <h1 class="ng-class: value;">{{message}}</h1>
+    
+          <h1 id="output-text" class={{emotion}}><font size={{value}}>{{message}}</font></h1>
 
       </div>
 </body>

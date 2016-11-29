@@ -1,10 +1,8 @@
 (function(){
-	var app = angular.module
-	app.controller('connote', []);
+	var app = angular.module('connote', []);
 
-  app.controller('classController', function(){
-  });
+	app.controller('moods', function($scope) {
+		$scope.moods = ['furious', 'upset', 'peeved', 'neutral', 'pleased', 'happy', 'ecstatic'];
+	});
 
-
-  var message = 'Test';
 })();
