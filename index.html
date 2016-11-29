@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html ng-app="messageEditorApp">
+<html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
-    <script src="main.js" type="text/javascript"></script>
+    <script src="main.js"></script>
+    <style>
+      .happy {
+        color: hotpink;
+      }
+      .sad {
+        color: blue;
+      }
+      .tired {
+        color: gray;
+      }
+    </style>
   </head>
   <body>
-  
+    <div ng-app="messageEditorApp" ng-controller="textCtrl as text">
+    What you're talking about:
+    <input type="text" ng-model="message">
+    How you're feeling:
+    <select ng-model="text.inCurr">
+      <option ng-repeat="mood in text.moods">{{mood}}</option>
+    </select>
+    How loud you are:
+     <input type="number" min="18" ng-model="text.fontSize">
+    <hr>
+    Your Message: <span ng-class=text.inCurr style="font-size:{{text.fontSize}}pt;">{{message}}</span>
+    <hr>
+    </div> 
   </body>
 </html>
