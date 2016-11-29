@@ -1,4 +1,4 @@
-Basic Angular Text Editor assignment for Code Fellows 401
+Simple Angular Message Editor assignment for Code Fellows 401
 
 by Greg Katchmar
 

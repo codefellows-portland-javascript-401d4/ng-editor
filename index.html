@@ -3,28 +3,24 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
     <script src="main.js"></script>
-    <style>
-        .negative {
-            color: red;
-        }
-    </style>
   </head>
   <body>
-    <div ng-controller="counterCtrl">
-      Count: <span ng-class="{ negative: count < 0 }">{{display(count)}}</span>
-      <hr>
-      <button ng-click="subtract()">subtract</button>
-      <button ng-click="add()">add</button>
-      <div ng-show="count < 0">
-          <button ng-click="reset()">give up and start over</button>
-      </div>
-    </div>
+ <div ng-app="myApp" ng-controller="formCtrl" ng-style="{font: selectedFont}">    
+      <form>
+           Message: <input type="text" ng-model="message">
+Select a font style:
+<select ng-model="selectedFont" ng-options="x for x in fonts">
+</select>
+<input type="button" value="embiggen" ng-click="myStyle={fontSize: 'xx-large'}">
+<input type="button" value="emredden" ng-click="myStyle={color:'red'}">
+<input type="button" value="clear" ng-click="myStyle={}">
 
-    <div ng-controller="fizzBuzz">
-        <input type="number" min="1" ng-model="countTo">
-        <ul ng-repeat="number in fizzBuzz(countTo) track by $index">
-            <li>{{number}}</li>
-        </ul>
-    </div>
+</form>
+<hr>
+<span ng-style="myStyle">{{message}}</span>
+</div>
   </body>
 </html>
+
+
+fontSize = "xx-large";
