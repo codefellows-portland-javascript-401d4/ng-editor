@@ -1,0 +1,31 @@
+<html ng-app="messageApp">
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+  </head>
+  <body ng-controller="messageInput">
+    <!--<input type="text" -->
+    <div>
+      Message: 
+      <input type="text" ng-model="body">
+    </div>
+
+    <div>
+      Style: 
+      <select ng-model="fontStyle">
+        <option value="default">Select a style</option>
+        <option ng-repeat="category in categories">{{category.name}}</option>
+      </select>
+    </div>
+
+    <hr>
+
+    <div class="{{fontStyle}}">
+      {{body}}
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
