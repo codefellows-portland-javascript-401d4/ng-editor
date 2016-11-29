@@ -17,8 +17,13 @@ app.controller('editorController', function($scope) {
     }
   };
 
+  $scope.styles = [
+    'robot',
+    'oldSkool',
+    'casual'
+  ]
   $scope.selectFont = function() {
 
   };
-  
+
 });

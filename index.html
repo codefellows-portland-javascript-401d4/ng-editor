@@ -33,8 +33,8 @@
     <input type="color" ng-model="textColor">
     </label>
     <label>Font style:
-      <select ng-model="fontStyle" ng-change="selectFont()">
-        <option ng-repeat="styl in ['robot', 'oldSkool', 'casual'] track by $index">{{ styl }}</option>
+      <select ng-model="fontStyle" ng-options="style for style in styles">
+        <!--<option ng-repeat="styl in ['robot', 'oldSkool', 'casual'] track by $index">{{ styl }}</option>-->
       </select>
     <hr>
     <span class="{{fontStyle}}" style="font-size:{{textEms}}em;color:{{textColor}}">{{ editText }}</span>
