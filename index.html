@@ -2,6 +2,7 @@
 <html ng-app>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="main.js"></script>
     <style>
       .display {
         font-size: 25px;
@@ -16,15 +17,19 @@
       .excited {
         color: goldenrod;
       }
+      .glad {
+        color: darkgreen;
+      }
 
     </style>
     </head>
     <body>
-      <div>
+      <div ng-controller="colorController">
         <label>Message:</label>
         <input type="text" ng-model="yourMessage" placeholder="Enter your message here">
         <!--<select ng-model="myColor" ng-options="color.name for options"></select>-->
         <label>Are you happy?</label>
+        <select ng-model="yourColor" ng-options="color.name for color in colors"></select>
         <input type="checkbox" ng-model="isHappy">
         <label>Excited?</label>
         <input type="range" ng-model="isExcited">
