@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="caraldiApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower|Lobster" rel="stylesheet">
+    <title>ng-editor</title>
+    <style>
+      .display {
+        font-size: 18px;
+        border: 2px dotted #d4ad35;
+      }
+      .retro {
+        font-family: 'Lobster', cursive;
+        color: #794044;
+      }
+      .handwritten {
+        font-family: 'Indie Flower', cursive;
+        color: #f08080;
+      }
+      .typewriter {
+        font-family: 'Inconsolata', monospace;
+        color: #468499;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div ng-controller="messageControl">
+      <label>Name:
+        <input type="text" ng-model="userName" placeholder="Enter your name here">
+      </label>
+      <label>Message:
+        <input type="text" ng-model="userMessage" placeholder="Enter your message here">
+      </label>
+      <select name="font">
+        <option value="">Select a font</option>
+        <option ng-class="retro">Retro script</option>
+        <option ng-class="handwritten">Printed by hand</option>
+        <option ng-class="typewriter">Typewriter</option>
+      </select>
+      <hr>
+      <h1 ng-class="display">{{display(userName + userMessage)}}</h1>
+    </div>
+  </body>
+</html>
