@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+      .enlarge {
+        font-size: 10em;
+      }
+    </style>
+  </head>
+  <body>
+    <div ng-controller="mainCtrl">
+      <label>Message:</label>
+      <input type="text" ng-model="userMessage" placeholder="Enter a message here">
+      <label>Super-size message:</label>
+      <input type="checkbox" ng-model="isEnlarge">
+      <hr>
+      <h1 ng-class="[{enlarge: isEnlarge}]">{{userMessage}}</h1>
+    </div>
+  </body>
+</html>
