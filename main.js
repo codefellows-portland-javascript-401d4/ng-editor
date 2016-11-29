@@ -1,7 +1,7 @@
 var app = angular.module('myApp', []);
 
 app.controller('colorController', function($scope) {
-  $scope.styles = [
+  $scope.colors = [
     { name: 'blue' },
     { name: 'golden' },
     { name: 'green'}
