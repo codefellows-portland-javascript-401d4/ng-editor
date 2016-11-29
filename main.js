@@ -1,8 +1,6 @@
 
 var app = angular.module('myApp', []);
 
-// let init = 16;
-
 app.controller('colorController', function($scope) {
     $scope.colors = [
         {name: 'red'},
@@ -17,15 +15,5 @@ app.controller('colorController', function($scope) {
     $scope.text = {
         size: 22
     }
-
-    // $scope.reset = function() {
-    //     $scope.count = 0;
-    // };
-    // $scope.add = function() {
-    //     $scope.count++;
-    // };
-    // $scope.subtract = function() {
-    //     $scope.count--;
-    // };
     
 });
