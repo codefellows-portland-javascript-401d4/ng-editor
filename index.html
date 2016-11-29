@@ -7,8 +7,19 @@
   <script src="main.js"></script>
   <style>
     .bright {
-      color: red;
+      color: #E6ED12;
+      font-family: Arial;
+    }
+    .bold {
+      font-family: Arial;
+      font-weight: bolder;
+      font-size: 40px;
+    }
 
+    .fine {
+      font-family: "Palatino Linotype";
+      font-weight: lighter;
+      color: #29DBD5;
     }
     </style>
 </head>
@@ -21,7 +32,7 @@
         <option value="">choose a style</option>
       </select>
     </label>
-    <h1 ng-class="{{myStyle.name}}">{{yourMessage}}</h1>
+    <h1 class="{{myStyle.name}}">{{yourMessage}}</h1>
   </div>
 </body>
 </html>
