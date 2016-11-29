@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        .bold {
+            font-weight: bold;
+        }
+        .underline {
+            text-decoration: underline;
+
+        }
+        .italics {
+            font-style: italic;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div ng-controller="fontCtrl">
+        <div>
+            <label>Message</label>
+            <input type="text" ng-model="message">
+        </div>
+        <div>
+            <ul>
+                <li ng-style="{'font-size': fontSize + 'px'}" ng-class="{bold: fontStyle.name === 'bold', underline: fontStyle.name === 'underline', italics: fontStyle.name === 'italics'}">{{message}}</li>
+            </ul>
+        </div>
+        <div>
+            <select ng-model="fontStyle" ng-options="font.name for font in fonts">
+                <option value=""> choose style </option>
+            </select>
+        </div>
+        <div>
+            <input type="range" min="12" max="50" ng-model="fontSize">
+            </input>
+        </div>
+    </div>
+</body>
+</html>
