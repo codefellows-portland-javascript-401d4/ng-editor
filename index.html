@@ -1,0 +1,40 @@
+<!<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <style>
+      .display {
+        font-size: 25px;
+        font-family: serif;
+      }
+      .helvetica {
+        font-family: helvetica;
+      }
+      .happy {
+        color: deepskyblue;
+      }
+      .excited {
+        color: goldenrod;
+      }
+
+    </style>
+    </head>
+    <body>
+      <div>
+        <label>Message:</label>
+        <input type="text" ng-model="yourMessage" placeholder="Enter your message here">
+        <!--<select ng-model="myColor" ng-options="color.name for options"></select>-->
+        <label>Are you happy?</label>
+        <input type="checkbox" ng-model="isHappy">
+        <label>Excited?</label>
+        <input type="range" ng-model="isExcited">
+        <hr>
+        {{mood}}
+        <p>Your message:</p>
+        <h1 ng-class="[{ happy: isHappy }, mood]">{{yourMessage}}</h1>
+        <h1 ng-class="[{ excited: isExcited }, mood]">{{yourMessage}}</h1>
+
+      </div>
+    </body>
+  </html>
+    
