@@ -13,20 +13,17 @@ app.controller('someKindaControl', function($scope) {
     {font: 'Bitter'}
   ];
 
-  $scope.CustomStyle = {};
   $scope.myColor = $scope.colors[0];
   $scope.myFont = $scope.fonts[0];
 
-  $scope.selectedColor = '';
+  $scope.selectedColor = 'red';
   $scope.selectedFont = '';
 
   $scope.changeColor = function(option) {
     $scope.selectedColor = option.color;
-    console.log(option.color);
   };
 
   $scope.changeFont = function(option) {
     $scope.selectedFont = option.font;
-    console.log(option.font);
   };
 });
