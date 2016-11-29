@@ -8,10 +8,13 @@
         <div ng-controller="formMsg">
             <form>
                 Message <input type="text" ng-model="message">
+                <input type="range" ng-model="fontRange" value="32" > 
             </form>
             <br>
             <h1>{{message}}</h1>
+            <h1>{{fontRange}}</h1>
         </div>
+
     </body>
 
 </html>
