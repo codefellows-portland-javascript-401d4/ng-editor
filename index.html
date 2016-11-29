@@ -39,7 +39,7 @@
     <body>
         <div ng-controller="inputController">
             Message: <input label="Message" placeholder="Your message here" ng-model="message" />
-            Color: <select ng-options="option for option in options" ng-init="black" ng-model="selected"></select>
+            Color: <select ng-options="option for option in options" ng-model="selected"></select>
             Size: <input type="range" min="5" max="300" ng-model="size"/>
             <hr width=550px>
             <h1 ng-class="selected" ng-style="{'font-family': font, 'font-size': size + 'px'}">{{message}}</h1>
