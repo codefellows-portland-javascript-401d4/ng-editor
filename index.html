@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html ng-app="myApp" ng-init="txt=''">
+  <head>
+    <meta encoding="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="./main.js"></script>
+    <style>
+      .big {
+        font-family: Impact, sans-serif;
+        color: blue;
+      }
+      .bold {
+        font-family: Impact, sans-serif;
+        font-weight: bolder;
+        color: black;
+      }
+      .beautiful{
+        font-family: cursive;
+        color: goldenrod;
+      }
+    </style>
+    </head>
+  <body>
+    <section ng-controller="styleCtrl">
+      <label for="message">MESSAGE</label>
+      <input ng-model="txt" type="text" name="message">  
+      <select ng-model="styleOpt" name="styles">
+        <option ng-repeat="string in styleOpts" value="{{string}}">{{string}}</option>
+      </select>
+      <input ng-model="rangeVal" type="range" min="4" max="8">
+      <div>{{rangeVal}}</div>
+      <hr>
+      <div ng-style="{'font-size': rangeVal + 'em'}" class={{styleOpt}}>
+      {{txt}}
+      </div>
+    </section>
+  </body>
+</html>
