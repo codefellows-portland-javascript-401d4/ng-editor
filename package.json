@@ -1,0 +1,37 @@
+{
+  "name": "ng-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "npm run test && node main.js",
+    "pretest": "npm run lint",
+    "test": "mocha",
+    "test:watch": "mocha -- -w",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mizutombo/ng-editor.git"
+  },
+  "keywords": [
+    "http",
+    "server"
+  ],
+  "author": "Tom Shultz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mizutombo/ng-editor"
+  },
+  "homepage": "https://github.com/mizutombo/ng-editor#LAB",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.8.1",
+    "mocha": "^3.1.2",
+    "nodemon": "^1.11.0"
+  }
+}
