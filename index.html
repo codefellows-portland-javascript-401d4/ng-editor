@@ -3,68 +3,69 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
     <script src="main.js"></script>
-    <style>
-      .modern {
-        color: blue;
-      }
-    </style>
+      <style>
+          .message {
+              min-height: 30px;
+              box-sizing: border-box;
+              width: 500px;
+              border: 2px solid black;
+              padding: 10px;
+              color: red;
+          }
+      </style>
   </head>
 
   <body>
-    <div>
-      <form name="myForm" ng-controller="fontFamily">
-        <!-- <tt>Font Family = {{family.name | json}}</tt> -->
+
+    <div ng-controller="main">
+
+      <label>Message:</label>
+          <br/>
+          <input type="text" ng-model="message" placeholder="Enter text here">
+          <br/>
+          <br/>
+          <div class="message {{family}}" style="font-family: {{family}}; font-size: {{value}}px; color: {{myColor.name}};">
+              {{message}}
+          </div>
+        <br/>
+
+      <label>Font Family:</label>
         <br/>
         <label>
-          <input type="radio" ng-model="family.name" value="Trebuchet">
+          <input type="radio" ng-model="family" value="Trebuchet">
           Trebuchet
         </label>
         <br/>
         <label>
-          <input type="radio" ng-model="family.name" value="Comic Sans MS">
+          <input type="radio" ng-model="family" value="Comic Sans MS">
           Comic Sans MS
         </label>
         <br/>
         <label>
-          <input type="radio" ng-model="family.name" value="Baskerville">
+          <input type="radio" ng-model="family" value="Baskerville">
           Baskerville
         </label>
         <br/>
-      </form>
-    </div>
-    <hr>
-    <div ng-controller="fontColor">
-      <ul>
-        <li ng-repeat="color in colors">
-          <label>Name: <input ng-model="color.name"></label>
-        </li>
-      </ul>
-    </div>
-    <label>Font Color:
-      <span class="nullable">
-      <select ng-model="myColor" ng-options="color.name for color in colors">
-        <option value="">-- choose color --</option>
-      </select>
-      </span>
-    </label>
-    <hr>
-    <div ng-controller="fontSize">
-      <form name="myForm" ng-controller="fontSize">
-        Font Size: <input type="range" name="range" ng-model="value" min="{{min}}"  max="{{max}}">
         <br/>
-        Font Size: <input type="number" ng-model="value">
-        <!-- <br> -->
-        <!-- Min: <input type="number" ng-model="min"><br>
-        Max: <input type="number" ng-model="max"><br> -->
-        <!-- value = <code>{{value}}</code>
-        <br/> -->
-        <!-- myForm.range.$valid = <code>{{myForm.range.$valid}}</code><br/>
-        myForm.range.$error = <code>{{myForm.range.$error}}</code> -->
-      </form>
+
+      <label>Font Color:</label>
+        <br/>
+        <span class="nullable">
+        <select ng-model="myColor" ng-options="color.name for color in colors">
+          <option value="">-- choose color --</option>
+        </select>
+        </span>
+        <br/><br/>
+
+      <label>Font Size: (pixels)</label>
+        <br/>
+        <input type="range" name="range" ng-model="value" min="{{min}}"  max="{{max}}">
+        <br/>
+        <input type="number" ng-model="value">
+        <br>
 
     </div>
 
   </body>
-
 
 </html>
