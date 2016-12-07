@@ -1,11 +1,14 @@
 'use strict';
 
-var app = angular.module('caraldiApp', []);
+const angular = require('angular');
+require('./main.css');
 
-app.controller('messageControl', function($scope) {
-  $scope.name = "userName"
-  $scope.message = "userMessage"
-  $scope.display = function(name, message) {
-    return `${ name } says: ${ message }`;
-  }
+const app = angular.module('caraldiApp', []);
+
+app.controller('mainController', function($scope) {
+    $scope.styles = ['abril', 'lobster', 'amatic', 'oswald'];
+    $scope.style = 'abril';
+    $scope.fontSize = 28;
+    $scope.name = '';
+    $scope.message = '';
 });
