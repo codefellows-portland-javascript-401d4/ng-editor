@@ -1,0 +1,23 @@
+div {
+  display:inline-block;
+  margin:0 auto;
+  padding:1%;
+}
+
+.modern {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing:2px;
+  color:#333;
+}
+
+.bold {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing:2px;
+  font-weight:800;
+  color:black;
+}
+
+.elegant {
+  font-family:cursive;
+  color:#666;
+}
