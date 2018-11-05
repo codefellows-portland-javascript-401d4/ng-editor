@@ -1,0 +1,19 @@
+{
+  "name": "ng-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caraldi/ng-editor.git"
+  },
+  "author": "Caitlin Araldi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caraldi/ng-editor/issues"
+  },
+  "homepage": "https://github.com/caraldi/ng-editor#readme"
+}
