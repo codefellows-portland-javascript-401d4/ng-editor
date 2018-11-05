@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="main.js"></script>
+    <style>
+        .modern {
+            font-family: sans-serif;
+            color: gray;
+        }
+
+        .boring {
+            font-family: monospace;
+            color: black;
+        }
+
+        .fancy {
+            font-family: serif;
+            color: #B3E5FC;
+            text-shadow:
+                -1px -1px 0 #03A9F4,
+                1px -1px 0 #03A9F4,
+                -1px 1px 0 #03A9F4,
+                1px 1px 0 #03A9F4;     
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="messageCtrl">
+        Message: <input type="text" ng-model="greeting">
+        <select ng-model="select">
+            <option ng-repeat="option in options track by $index" value="{{option}}">{{option}}</option>
+        </select>
+        <input type="range" ng-model="slider">
+        <br />
+        <hr />
+        <div>
+            <span ng-class="select" ng-style="calcSize(slider)">{{greeting}}</span>
+        </div>
+    </div>
+</body>
+</html>
