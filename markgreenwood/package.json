@@ -1,0 +1,31 @@
+{
+  "name": "ng-editor",
+  "version": "0.1.0",
+  "description": "Bitmap color transformer",
+  "main": "ng-editor.js",
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "pretest": "npm run lint",
+    "test": "exit 0",
+    "build": "npm install",
+    "dev": "npm install --save-dev",
+    "watch": "npm run test -- -w",
+    "start": "node ./lib/ng-editor.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markgreenwood/ng-editor.git"
+  },
+  "author": "@markgreenwood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markgreenwood/ng-editor/issues"
+  },
+  "homepage": "https://github.com/markgreenwood/ng-editor#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.8.1",
+    "mocha": "^3.1.2"
+  },
+  "dependencies": {}
+}
